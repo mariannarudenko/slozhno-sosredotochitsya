@@ -1,5 +1,75 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.header {
+
+}
+
+.decorated-zone {
+}
+
+/*THEME NAVIGATION*/
+.header__theme-menu {
+  margin-block-start: 20px;
+}
+.header__theme-menu-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.header__theme-menu-item {
+}
+
+.header__theme-menu-button {
+  text-transform: lowercase;
+  color: var(--color-accent);
+  font-weight: var(--font-weight-main);
+  font-size: var(--font-size-main);
+  line-height: 100%; /*18px*/
+  background-color: transparent;
+  border: none;
+  padding: 1.5px 13px;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid #ff007066; /**/
+}
+
+.header__theme-menu-button:focus { 
+  border-bottom: 1px solid currentColor;
+}
+
+.header__theme-menu-button:checked { 
+  border: 1px solid currentColor;
+}
+
+/*THEME NAVIGATION*/
+
+.header__title {
+  color: var(--color-title);
+  font-size: var(--font-size-title);
+  text-shadow: 4px 4px var(--color-accent);
+  margin-block-start: 241px; /**/
+}
+
+.header__subtitle {
+  display: block;
+  margin: 77px 20px 0 513px;
+}
+
+.accent-subtitle {
+  background-color: var(--color-accent);
+  color: var(--color-subtitle);
+  font-size: var(--font-size-main);
+}
+
+/*for 768px */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header__theme-menu-list {
+    flex-direction: column;
+    align-items: end;
+  }
 }
