@@ -1,26 +1,56 @@
+* {
+   /* border: 1px solid green; */
+  }
+ 
+  /*change bg-image ADD FALLBACKS*/
 .page {
   width: 1024px;
-  margin: 0 auto;
+  background: url(../images/cover-image-dark.png) no-repeat center top var(--color-background, #000028);
+  background-size: 1230px 768px;
+  background-attachment: fixed;  
 }
 
 .header {
-
+  
 }
 
 .decorated-zone {
+  position: relative;
+  z-index: 0;
 }
 
-/*THEME NAVIGATION*/
-.header__theme-menu {
-  margin-block-start: 20px;
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-bottom: 1px solid var(--color-accent);
+  border-left: 1px solid var(--color-accent);
+  inset-block-end: -114px;
+  inset-inline-start: 20px;
+  z-index: -1;
 }
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid var(--color-accent);
+  border-right: 1px solid var(--color-accent);
+  inset-block-start: 20px; 
+  inset-inline-end: 20px;
+  z-index: -1;
+}
+
+.header__theme-menu {
+  padding-block-start: 20px;
+}
+
 .header__theme-menu-list {
   display: flex;
   justify-content: center;
   gap: 10px;
-}
-
-.header__theme-menu-item {
 }
 
 .header__theme-menu-button {
@@ -28,36 +58,60 @@
   color: var(--color-accent);
   font-weight: var(--font-weight-main);
   font-size: var(--font-size-main);
-  line-height: 100%; /*18px*/
+  line-height: 100%;
   background-color: transparent;
   border: none;
   padding: 1.5px 13px;
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid #ff007066; /**/
+  border: 1px solid var(--color-hover-button);
 }
 
-.header__theme-menu-button:focus { 
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
   border-bottom: 1px solid currentColor;
 }
 
-.header__theme-menu-button:checked { 
+.header__theme-menu-button:checked {
   border: 1px solid currentColor;
 }
 
-/*THEME NAVIGATION*/
+.cover__decor {
+  color: var(--color-accent);
+  font-size: var(--font-size-main);
+  position: absolute;
+  inset-block-start: 21px;
+  inset-inline-end: 48px;
+}
 
-.header__title {
+.cover__decor::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 60%;
+  box-shadow: 0 0 3px 2px var(--color-accent);
+  background-color: var(--color-accent);
+  inset-block-start: 7px;
+  inset-inline-start: 40px;
+  z-index: -1;
+}
+
+/*chenge margin because it strange*/
+.cover__title {
   color: var(--color-title);
   font-size: var(--font-size-title);
   text-shadow: 4px 4px var(--color-accent);
-  margin-block-start: 241px; /**/
+  margin-block-start: 23.6%;
 }
 
-.header__subtitle {
+.cover__subtitle {
   display: block;
-  margin: 77px 20px 0 513px;
+  margin: 7.5% 1.9% 13% 50.1%; /* bottom procentage need change */
 }
 
 .accent-subtitle {
@@ -66,10 +120,207 @@
   font-size: var(--font-size-main);
 }
 
-/*for 768px */
-@media (min-width: 768px) and (max-width: 1024px) {
+/*change padding may be*/
+.content__section-why {
+  padding: 61px 19px 0 19px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(236px, 315px)); /**/
+  gap: 20px;
+  grid-template-areas: "title content content";
+}
+
+.content__title {
+  grid-area: title;
+  color: var(--color-accent);
+  font-size: var(--font-size-main);
+}
+
+.content__list {
+  grid-area: content;
+}
+
+/*may be amother padding*/
+.content__text {
+  padding-block-start: 10px; 
+  padding-block-end: 22px; 
+  color: var(--color-paragraph);
+  font-size: var(--font-size-main);
+}
+
+.link-decoration {
+  text-decoration: none;
+  text-shadow: 2px 2px var(--color-accent);
+}
+
+.content__section {
+  
+}
+
+.content__section-that {
+  
+}
+
+.content__title_section-that {
+  padding: 60px 700px 20px 20px; /*false*/
+}
+
+/*add padding*/
+.content__list_section-that {
+  padding-inline: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(236px, 315px));
+  gap: 20px;
+  grid-template-areas: 
+  "multi food gadget";
+}
+
+.content__list-item_multi {
+  grid-area: multi;
+}
+
+.content__list-item_food {
+  grid-area: food;
+}
+
+.content__list-item_gadget {
+  grid-area: gadget;
+}
+
+.content__section-how {
+}
+
+.content__section-pictures {
+}
+
+.content__gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 32.7%); /**/
+  grid-template-rows: repeat(3, 32.7%); /**/
+  gap: 20px;
+}
+
+.content__gallery-item {
+  max-width: 100%; /**/
+  height: 100%; /**/
+}
+
+.picture_sunset {
+  grid-column-start: 1;
+  grid-column-end: span 2;
+}
+
+.picture_ice-cream {
+  grid-column-start: 3;
+  grid-row-end: span 2;
+}
+
+.picture_street {
+  grid-column-start: 2;
+  grid-column-end: span 2;
+}
+
+.picture_tape {
+  grid-row-start: 2;
+  grid-row-end: span 3;
+}
+
+
+@media (max-width: 1024px) {
+  .page {
+    width: 768px; 
+  }
+
+  .decorated-zone::before {
+    inset-block-end: -164px;
+    inset-inline-start: 20px;
+  }
+  
+  /*i realy dont think that is true*/
   .header__theme-menu-list {
-    flex-direction: column;
-    align-items: end;
+    padding: 173px 20px 0 0; 
+    flex-direction: column; 
+    align-items: flex-end; 
+    gap: 15px; /*10px*/
+  }
+
+  .cover__title {
+    margin-block-start: 19%;
+  }
+  
+  .cover__subtitle {
+    margin: 17.5% 2.6% 20% 50.1%; /* bottom procentage need change */
+  }
+
+  .content__title_section-that {
+    padding: 60px 630px 20px 20px; /*false*/
+  }
+
+  .content__list_section-that {
+    grid-template-columns: repeat(3, minmax(236px, 315px));
+    grid-template-rows: repeat(3, content-fit); /**/
+    gap: 20px;
+    grid-template-areas:
+      "multi multi multi"
+      "food food food"
+      "gadget gadget gadget";
+  }
+}
+
+@media (max-width: 768px) {
+  .page {
+    width: 375px; 
+  }
+
+  .decorated-zone::before {
+    inset-block-end: -57px;
+    inset-inline-start: 10px;
+  }
+
+  .decorated-zone::after {
+    inset-block-start: 10px;
+    inset-inline-end: 10px;
+  }
+
+  .header__theme-menu-list {
+    padding: 55px 10px 0 0; 
+  }
+
+  .cover__decor {
+    inset-block-start: 10px;
+    inset-inline-end: 38px;
+
+  }
+
+  .cover__title {
+    margin-block-start: 18%;
+    margin-inline-start: 3%;
+    line-height: 84%;
+  }
+  
+  .cover__subtitle {
+    margin: 14.1% 2.5% 20% 2.7%; /* bottom procentage need change */
+  }
+  .content__section-why {
+    padding: 40px 10px 0 10px;
+    grid-template-columns: minmax(375px, 767px); /**/
+    grid-auto-rows: content-fit;
+    grid-template-areas:
+      "title"
+      "content"
+      "content";
+  }
+  
+  .content__title_section-that {
+    padding: 60px 230px 20px 20px; /*false*/
+  }
+
+  .content__list_section-that {
+    grid-template-columns: minmax(375px, 767px);
+    grid-auto-rows: content-fit;
+    gap: 20px;
+    grid-template-areas:
+      "multi"
+      "food"
+      "gadget";
   }
 }
