@@ -1,32 +1,48 @@
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-decor: #ff0070;
-    --color-title-shadow: #ff0070;
-    --color-title: #db00ff;
-    --color-accent: #ff0070;
-    --color-link: #ff0070;
-    --color-subtitle-accent: #ff0070;
-    --color-subtitle: #000028;
-    --color-background: #000028;
-    --color-text: #f1b2ce;
-    --color-button-hover: #ff007066;
+:root {
+  --color-decor: #ff0070;
+  --color-title-shadow: #ff0070;
+  --color-title: #db00ff;
+  --color-accent: #ff0070;
+  --color-link: #ff0070;
+  --color-subtitle-accent: #ff0070;
+  --color-subtitle: #000028;
+  --color-background: #000028;
+  --color-text: #f1b2ce;
+  --color-button-hover: #ff007066;
 
-    --image-background: url(../images/cover-image-dark.png);
+  --image-background: url(../images/cover-image-dark.png);
+
+  --font-title-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+
+  --height-label: 768px;
+  --margin-block-end-header: 60px;
+  --margin-block-start-footer: 58px;
+
+  --inset-decorated-before-block: 20px;
+  --inset-decorated-before-inline: 20px;
+  --inset-decorated-after-block: 20px;
+  --inset-decorated-after-inline: 20px;
+}
+
+@media (width < 1024px) {
+  :root {
+    --height-label: 1024px;
+
+    --margin-block-end-header: 60px;
   }
 }
 
-@media (prefers-color-scheme: light) {
+@media (width < 768px) {
   :root {
-    --color-decor: #353430;
-    --color-title-shadow: #ff0070;
-    --color-title: #ffc2e6;
-    --color-accent: #ff8dcb;
-    --color-subtitle-accent: #353430;
-    --color-subtitle: #353430;
-    --color-text: #353430;
-    --color-button-hover: #32312d66;
-    --color-background: #fff1f7;
+    --font-title-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 
-    --image-background: url(../images/cover-image-light.png);
+    --height-label: 668px;
+    --margin-block-end-header: 39px;
+    --margin-block-start-footer: 41px;
+
+    --inset-decorated-before-block: 10px;
+    --inset-decorated-before-inline: 10px;
+    --inset-decorated-after-block: 10px;
+    --inset-decorated-after-inline: 10px;
   }
 }

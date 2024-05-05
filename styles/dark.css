@@ -11,4 +11,8 @@
   --color-button-hover: #ff007066;
 
   --image-background: url(../images/cover-image-dark.png);
+
+  .cover__decor {
+    display: block;
+  }
 }

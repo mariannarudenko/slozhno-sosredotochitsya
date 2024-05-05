@@ -6,17 +6,32 @@
   --color-subtitle-accent: #353430;
   --color-subtitle: #353430;
   --color-text: #353430;
-  --color-button-hover: #32312D66;
+  --color-button-hover: #32312d66;
   --color-background: #fff1f7;
 
   --image-background: url(../images/cover-image-light.png);
-  
+
   .cover__decor {
     display: none;
   }
 }
 
-
-
-
-
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-decor: #353430;
+    --color-title-shadow: #ff0070;
+    --color-title: #ffc2e6;
+    --color-accent: #ff8dcb;
+    --color-subtitle-accent: #353430;
+    --color-subtitle: #353430;
+    --color-text: #353430;
+    --color-button-hover: #32312d66;
+    --color-background: #fff1f7;
+  
+    --image-background: url(../images/cover-image-light.png);
+  
+    .cover__decor {
+      display: none;
+    }
+  }
+}
