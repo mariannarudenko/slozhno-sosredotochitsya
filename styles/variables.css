@@ -14,11 +14,10 @@
 
   --font-title-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
 
-  --height-label: 768px;
   --margin-block-end-header: 60px;
   --margin-block-start-footer: 58px;
 
-  --inset-decorated-before-block: 20px;
+  --inset-decorated-before-block: -80px;
   --inset-decorated-before-inline: 20px;
   --inset-decorated-after-block: 20px;
   --inset-decorated-after-inline: 20px;
@@ -26,9 +25,7 @@
 
 @media (width < 1024px) {
   :root {
-    --height-label: 1024px;
-
-    --margin-block-end-header: 60px;
+    --inset-decorated-before-block: 979px;
   }
 }
 
@@ -36,11 +33,10 @@
   :root {
     --font-title-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 
-    --height-label: 668px;
     --margin-block-end-header: 39px;
     --margin-block-start-footer: 41px;
 
-    --inset-decorated-before-block: 10px;
+    --inset-decorated-before-block: 633px;
     --inset-decorated-before-inline: 10px;
     --inset-decorated-after-block: 10px;
     --inset-decorated-after-inline: 10px;
