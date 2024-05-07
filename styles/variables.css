@@ -16,8 +16,9 @@
 
   --margin-block-end-header: 60px;
   --margin-block-start-footer: 58px;
+  --margin-inline-page: clamp(10px, 2.6vw, 20px);
 
-  --inset-decorated-before-block: -80px;
+  --inset-decorated-before-block: 20px;
   --inset-decorated-before-inline: 20px;
   --inset-decorated-after-block: 20px;
   --inset-decorated-after-inline: 20px;

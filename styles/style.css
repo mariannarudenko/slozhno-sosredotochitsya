@@ -14,7 +14,7 @@
 }
 
 .decorated-zone {
-  min-height: 668px;
+  height: 100vh;
   position: relative;
   z-index: 0;
 }
@@ -31,7 +31,7 @@
 .decorated-zone::before {
   border-bottom: 1px solid var(--color-decor, #ff0070);
   border-left: 1px solid var(--color-decor, #ff0070);
-  inset-block-end: var(--inset-decorated-before-block, -80px);
+  inset-block-end: var(--inset-decorated-before-block, 20px);
   inset-inline-start: var(--inset-decorated-before-inline, 20px);
 }
 
@@ -112,8 +112,6 @@
 }
 
 .cover__title {
-  margin-block-start: 100px;
-  align-self: end;
   justify-self: start;
   line-height: 82.5%;
 }
@@ -129,11 +127,11 @@
 
 .cover__subtitle,
 .content__section {
-  margin-inline: 20px;
+ margin-inline: var(--margin-inline-page, clamp(10px, 2.6vw, 20px));
 }
 
 .cover__subtitle {
-  margin-block-start: 80px;
+  margin-block-end: 20px;
   width: 48%;
   white-space: pre-line;
   align-self: center;
@@ -150,7 +148,6 @@ h4.accent-subtitle {
 }
 
 .content__section-why {
-  margin-block-start: 160px;
   display: grid;
   grid-template-columns: repeat(3, minmax(236px, 315px));
   grid-auto-rows: auto;
@@ -270,7 +267,6 @@ h4.accent-subtitle {
 }
 
 .footer__title {
-  padding-block-start: 102px;
   align-self: center;
 }
 
@@ -284,27 +280,21 @@ h4.accent-subtitle {
   }
 
   .header__theme-menu,
-  .cover__subtitle,
   .content__section:nth-child(even),
   .content__title,
   .content__list,
   .accent-subtitle-how {
-    margin-inline: 20px;
+    margin-inline: var(--margin-inline-page, clamp(10px, 2.6vw, 20px));
   }
 
   .header__theme-menu {
-    padding-block-start: 192px;
-    align-self: flex-end;
+    align-self: center;
   }
 
   .header__theme-menu-list {
     flex-direction: column;
     align-items: flex-end;
     gap: 14px;
-  }
-
-  .cover__title {
-    margin-block: 175px 40px;
   }
 
   .cover__subtitle {
@@ -322,10 +312,6 @@ h4.accent-subtitle {
 
   .content__title:first-of-type {
     margin-inline-end: 0;
-  }
-
-  .content__section-why {
-    margin-block-start: 200px;
   }
 
   .content__title_section-that {
@@ -347,8 +333,7 @@ h4.accent-subtitle {
   }
 
   .footer__title {
-    padding-block-end: 80px;
-    align-self: end;
+    align-self: center;
   }
 }
 
@@ -382,7 +367,7 @@ h4.accent-subtitle {
   .content__section:nth-child(even),
   .content__list:first-child,
   .content__list {
-    margin-inline: 10px;
+    margin-inline: var(--margin-inline-page, clamp(10px, 2.6vw, 20px));
   }
 
   .content__list_section-that,
@@ -406,7 +391,7 @@ h4.accent-subtitle {
   }
 
   .cover__subtitle {
-    margin-block: 0 10px; 
+    margin-block-end: 10px; 
   }
 
   .content__title {
@@ -462,7 +447,6 @@ h4.accent-subtitle {
   }
 
   .footer__title {
-    padding-block-end: 104px;
     align-self: center;
   }
 }
